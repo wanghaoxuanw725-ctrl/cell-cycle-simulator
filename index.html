@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>细胞周期同步化模拟实验</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>细胞周期同步化模拟实验</h1>
+
+    <div class="simulation-container">
+
+        <!-- 左边：细胞周期图 -->
+        <div class="simulation-card">
+
+            <svg id="cellCycle" width="500" height="500">
+
+                <!-- 中间的白色区域 -->
+                <circle
+                    cx="250"
+                    cy="250"
+                    r="148"
+                    class="inner-circle"
+                />
+
+                <!-- 四个阶段的文字 -->
+                <text x="190" y="45" class="phase-label">M</text>
+                <text x="480" y="265" class="phase-label">G1</text>
+                <text x="250" y="490" class="phase-label">S</text>
+                <text x="50" y="140" class="phase-label">G2</text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 右边：当前细胞数量 -->
+        <div class="info-card">
+
+            <h2>各阶段细胞数量</h2>
+        
+            <p>
+                G1：
+                <span id="countG1">0</span>
+            </p>
+        
+            <p>
+                S：
+                <span id="countS">0</span>
+            </p>
+        
+            <p>
+                G2：
+                <span id="countG2">0</span>
+            </p>
+        
+            <p>
+                M：
+                <span id="countM">0</span>
+            </p>
+        
+        
+            <hr>
+        
+        
+            <h2>模拟控制</h2>
+        
+            <button id="pauseButton">
+                ⏸ 暂停
+            </button>
+        
+            <button id="resetButton">
+                ↻ 重置
+            </button>
+        
+        
+            <h3>模拟速度</h3>
+        
+            <input
+                id="speedSlider"
+                type="range"
+                min="0"
+                max="2"
+                step="0.1"
+                value="1"
+            >
+        
+        
+            <p>
+                当前状态：
+                <span id="statusText">运行中</span>
+            </p>
+        
+        
+            <hr>
+        
+        
+            <h2>药物控制</h2>
+        
+            <button id="addDrugButton">
+                加入药物
+            </button>
+        
+            <button id="removeDrugButton">
+                去除药物
+            </button>
+        
+        
+            <p>
+                抑制剂状态：
+                <span id="drugStatus">未加入</span>
+            </p>
+        
+            <p>
+                实验状态：
+                <span id="experimentStatus">正常周期</span>
+            </p>
+        
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

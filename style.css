@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+
+h1 {
+    margin-top: 30px;
+}
+
+
+/* 整个模拟区域 */
+.simulation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+
+/* 左边的模拟器 */
+.simulation-card {
+    width: 500px;
+    height: 500px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SVG 中间的白色区域 */
+.inner-circle {
+    fill: white;
+}
+
+
+/* G1 / S / G2 / M 标签 */
+.phase-label {
+    font-size: 24px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+
+/* 细胞 */
+.cell {
+    stroke: white;
+    stroke-width: 1;
+}
+
+
+/* 右侧统计卡片 */
+.info-card {
+    width: 200px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+.info-card h2 {
+    margin-top: 0;
+}
+
+.info-card p {
+    font-size: 18px;
+}
+/* 分隔线 */
+.info-card hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+
+/* 控制按钮 */
+.info-card button {
+    padding: 10px 15px;
+    margin-right: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* 鼠标放上去时 */
+.info-card button:hover {
+    opacity: 0.8;
+}
+
+
+/* 速度滑块 */
+#speedSlider {
+    width: 100%;
+}
+/* 药物控制按钮 */
+
+#addDrugButton {
+    background-color: #ffb74d;
+}
+
+#removeDrugButton {
+    background-color: #81c784;
+}
+
+
+/* 药物状态 */
+
+#drugStatus {
+    font-weight: bold;
+}
+
+
+/* 实验状态 */
+
+#experimentStatus {
+    font-weight: bold;
+}
